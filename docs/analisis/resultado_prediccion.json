@@ -1,0 +1,18 @@
+{
+  "dispositivo": "TWIN-01",
+  "tipo_fuente": "Gemelo digital: datos simulados",
+  "variable": "temperature",
+  "horizonte_prediccion_minutos": 5,
+  "observaciones_agrupadas": 2054,
+  "ejemplos_supervisados": 2042,
+  "ejemplos_entrenamiento": 1633,
+  "ejemplos_evaluacion": 409,
+  "inicio_utc": "2026-11-11T22:15:00+00:00",
+  "ultima_observacion_utc": "2026-11-19T01:18:18.689475+00:00",
+  "fecha_pronostico_utc": "2026-11-19T01:23:18.689475+00:00",
+  "temperatura_ultima_c": 24.761000000000003,
+  "prediccion_c": 24.226072101866666,
+  "mae_random_forest_c": 0.07227981829460177,
+  "mae_persistencia_c": 0.8657155664221682,
+  "advertencia": "Modelo entrenado con datos simulados, sin validación en edificios reales."
+}
