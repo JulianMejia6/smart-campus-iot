@@ -1,0 +1,32 @@
+services:
+  influxdb:
+    image: influxdb:2.9.1
+    container_name: smart-campus-influxdb
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:8086:8086"
+
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+
+  grafana:
+    image: grafana/grafana:13.2.2
+    container_name: smart-campus-grafana
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:3000:3000"
+
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+    depends_on:
+      - influxdb
+
+volumes:
+  influxdb_data:
+  influxdb_config:
+  grafana_data:
+

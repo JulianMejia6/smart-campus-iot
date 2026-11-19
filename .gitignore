@@ -1,0 +1,25 @@
+.venv/
+.env.local
+__pycache__/
+
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Datos locales y temporales
+datos/datasets/*.csv
+*.tar.gz
+
+# Archivos del sistema
+.DS_Store

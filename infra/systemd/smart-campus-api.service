@@ -1,0 +1,16 @@
+[Unit]
+Description=Smart Campus - Estaciones meteorologicas API
+Wants=network-online.target
+After=network-online.target mosquitto.service
+
+[Service]
+Type=simple
+User=azureuser
+WorkingDirectory=/home/azureuser/smart-campus-iot
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/azureuser/smart-campus-iot/.venv/bin/python /home/azureuser/smart-campus-iot/dispositivos/estaciones_api.py
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
